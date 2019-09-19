@@ -20,17 +20,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     JLScrollNavigationController *controller = [[JLScrollNavigationController alloc]init];
+    
     controller.scrollNavigationDataSource = self;
     controller.scrollNavigationDelegate = self;
-    controller.view.backgroundColor = [UIColor orangeColor];
-    
     controller.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    
     [self addChildViewController:controller];
     [controller didMoveToParentViewController:self];
+
     [self.view addSubview:controller.view];
+    
+
+    
 }
 
 - (NSInteger)numberOfTitleInScrollNavigationController:(JLScrollNavigationController *)scrollNavigationController

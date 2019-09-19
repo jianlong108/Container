@@ -324,7 +324,7 @@ JLScrollTitleBarDataSource
 
 - (void)loadCustomHeadViewDateSource
 {
-    if ([self.scrollNavigationDataSource respondsToSelector:@selector(headerViewForScrollNavigationController:)])
+    if (self.scrollNavigationDataSource && [self.scrollNavigationDataSource respondsToSelector:@selector(headerViewForScrollNavigationController:)])
     {
         [self.customHeaderView removeFromSuperview];
         
